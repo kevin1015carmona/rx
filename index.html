@@ -188,7 +188,7 @@
       </section>
       <section id="contact">
         <h2>Contactanos para recibir asesoria</h2>
-        <form id="mail_section">
+        <form id="mail_section" onsubmit="return false">
           <label id="label_name" for="name">Nombre:</label>
           <input type="text" id="name" name="name" />
           <span id="error_name">Introduce un Nombre</span>
@@ -203,6 +203,7 @@
 
           <label id="label_subject" for="subject">Asunto:</label>
           <select id="subject" name="subjects">
+            <option value="">--Selecciona una opción</option>
             <option value="Reparacion">Reparacion</option>
             <option value="venta">venta</option>
             <option value="Otro">Otro</option>
@@ -215,10 +216,18 @@
 
           <input id="submit" type="submit" value="Contactar!" />
         </form>
+        <section id="mail_sent">
+          <img src="" alt="" srcset="" />
+          <h4>
+            Correo enviado correctamente, agradecemos tu interes, en unos
+            minutos nos pondremos en contacto contigo
+          </h4>
+        </section>
       </section>
     </main>
     <footer>
       <h3>Creado por: <a href="">&copy;Kevin Carmona</a></h3>
     </footer>
+    <script src="mail.js"></script>
   </body>
 </html>

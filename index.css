@@ -416,9 +416,28 @@ main {
 #mail_section {
   display: grid;
   grid-template-columns: 48vw 48vw;
-  grid-template-rows: repeat(10, 5%) 15% 5% 10%;
-  row-gap: 2%;
+  grid-template-rows: repeat(10, 5%) 15% 5% 15%;
+  row-gap: 1.5%;
   column-gap: 4vw;
+}
+
+#error_name,
+#error_last_name,
+#error_mail,
+#error_subject,
+#error_mensaje {
+  display: none;
+  background-color: rgba(255, 71, 71, 0.562);
+  border: red 1px double;
+}
+
+#name,
+#last_name,
+#mail,
+#subject,
+#mensaje {
+  background-color: #86868675;
+  border: 1px grey solid;
 }
 
 #label_name {
@@ -495,7 +514,80 @@ main {
 
 #submit {
   grid-row: 13/14;
+  grid-column: 1/3;
+  width: 80%;
+  margin-left: 10%;
+  background-color: #4682b4e0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes inputs_enter {
+  from {
+    background-color: #86868675;
+  }
+  to {
+    background-color: white;
+  }
+}
+
+@keyframes inputs_out {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: #86868675;
+  }
+}
+
+@keyframes submit_successful {
+  from {
+    background-color: #4682b4e0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  to {
+    background-color: #03b903e0;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes submit_error {
+  from {
+    background-color: #4682b4e0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  to {
+    background-color: #ff2020fa;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes submit_error_return {
+  from {
+    background-color: #4682b4e0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  to {
+    background-color: #ff2020fa;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.8);
+  }
+}
+
+#mail_sent {
+  display: none;
+  background-color: red;
+  height: 200px;
+  width: 200px;
 }
 
 /*FIN SECCION MAIL*/
 /*------MAIN--FOOTER---------------*/
+/*INCIO SECCION FOOTER*/
+
+/*FIN SECCION FOOTER*/
+footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/*INICIO RESPONSIVE*/
