@@ -63,9 +63,6 @@ window.addEventListener("load", function () {
   submit.addEventListener("click", () => {
     const mail_section = document.getElementById("mail_section");
     const mail_sent = document.getElementById("mail_sent");
-
-    console.log(mail.value);
-    console.log(mensaje.value);
     if (
       name.value === "" ||
       last_name.value === "" ||
@@ -85,7 +82,7 @@ window.addEventListener("load", function () {
 
       setTimeout(() => {
         mail_section.style.display = "none";
-        mail_sent.style.display = "block";
+        mail_sent.style.display = "grid";
       }, 3000);
     }
   });
